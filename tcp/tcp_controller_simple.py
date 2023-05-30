@@ -36,5 +36,5 @@ while True:
     fprint("Client %s:%s connected" % (client_ip, client_port))
     data = client.recv(1024)
     while data:
-        print("Client sent %s" % data.decode(), flush=True)
+        print("  Client sent %s" % data.decode(), flush=True)
         data = client.recv(1024)

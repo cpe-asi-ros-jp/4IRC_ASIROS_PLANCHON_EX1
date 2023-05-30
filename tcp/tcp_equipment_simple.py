@@ -31,7 +31,7 @@ def sigint_handler(n=False):
 # Create alive subprocess
 pid = os.fork()
 if pid == 0:
-    signal.signal(signal.SIGINT, lambda sig, frame: sigint_handler())
+    signal.signal(signal.SIGINT, lambda sig, frame: sigint_handler(False))
     while True:
         time.sleep(5)
         notify("alive")
